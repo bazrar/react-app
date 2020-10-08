@@ -1,0 +1,28 @@
+.BuildControls {
+    width: 100%;
+    background-color: #cf8f2e;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    box-shadow: 0 2px 1px #ccc;
+    margin: auto;
+    padding: 10px 0px;
+}
+
+.Order {
+    padding: 15px;
+    background: #888888;
+    color: rgb(202, 202, 202);
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    text-align:center;
+
+
+}
+
+
+.Order:active{
+    background: #616161;
+
+}
