@@ -16,9 +16,10 @@ class BurgerBuilder extends Component{
     state= {
         ingridients: {
             salad:0,
-            meat:0,
             cheese:0,
-            bacon:0
+            meat:0,
+            
+            
         }, 
         price:4,
         purchaseable: false,
@@ -53,6 +54,7 @@ class BurgerBuilder extends Component{
         // console.log(this.state.purchaseable)
     }
     addIngridientHandler = (type)=> {
+        // console.log('addIngridientHandler')
         let oldValue=this.state.ingridients[type]
         let newValue=oldValue + 1 
         let objClone = { ...this.state.ingridients } 

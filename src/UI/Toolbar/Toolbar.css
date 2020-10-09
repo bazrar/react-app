@@ -1,0 +1,11 @@
+.Toolbar{ 
+    width: 100%;
+    height: 56px;
+    background-color: rgb(51, 39, 2);
+    color:rgb(177, 177, 177);
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    box-shadow: 3px 3px 5px #9e9e9e;
+}
+
