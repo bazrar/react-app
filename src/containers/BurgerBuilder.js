@@ -31,6 +31,17 @@ class BurgerBuilder extends Component{
             order: true
         })
     }
+
+    purchaseCancelHandler= () => {
+        this.setState({
+            order: false
+        })
+    }
+
+    continueHandler(){
+        alert('you continue')
+    }
+
     updatePurchasableState(objClone) {
         let sum = Object.keys(objClone)
         .map(igKey => objClone[igKey])
@@ -83,7 +94,10 @@ class BurgerBuilder extends Component{
         return( 
             <Aux>
                  <Modal show={this.state.order}>
-                    <OrderSummary ingridients={this.state.ingridients}/>
+                    <OrderSummary ingridients={this.state.ingridients}
+                    price={this.state.price}
+                    cancel={this.purchaseCancelHandler}
+                    continue={this.continueHandler}/>
                  </Modal> 
                  <Burger ingridients={this.state.ingridients}/>
                  <BuildControls label={this.state.ingridients}
