@@ -1,0 +1,26 @@
+.NavigationItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3px; 
+    height: 100%;
+    font-size: 18px;
+    list-style: none;
+    
+}
+
+.NavigationItem li a{
+    text-decoration: none;
+    color: #fff;
+    padding:10px;
+    background-color: rgba(36, 20, 0, .3);
+   
+}
+
+
+.NavigationItem li a:hover{
+    border-bottom:3px solid #e3e3e3;
+    transition: .1s;
+    background-color: rgba(36, 20, 0, .5);
+   
+}
