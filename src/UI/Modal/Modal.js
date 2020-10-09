@@ -1,15 +1,19 @@
 import { transform } from '@babel/core';
 import React from 'react';
+import Aux from '../../hoc/Aux';
+import Backdrop from '../Backdrop/Backdrop';
 import classes from './Modal.css'
 const Modal = props => (
-    <div className={classes.Modal}
-    style={{
-        transform: props.show ? 'transformY(10px)' : 'transformY(-100vh)',
-        opacity: props.show ? 0.8:0
-        
+    <Aux>
+        <Backdrop show={props.show}/>
+        <div className={classes.Modal}
+        style={{
+        opacity: props.show ? 1:0
     }}>
         {props.children}
     </div>
+    </Aux>
+    
 )
 
 export default Modal;

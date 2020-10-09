@@ -14,10 +14,12 @@ export default function Burger(props) {
         ingridientsList=<p>Please select the ingridients</p>
     }
     return (
-        <div className={classes.Burger}>
-            <BurgerIngridient type='bread-top'/>
-            {ingridientsList}
-            <BurgerIngridient type='bread-bottom'/>
+        <div style={{marginTop: '5rem'}}>
+             <div className={classes.Burger}>
+                <BurgerIngridient type='bread-top'/>
+                {ingridientsList}
+                <BurgerIngridient type='bread-bottom'/>
+            </div> 
         </div>
     )
 }

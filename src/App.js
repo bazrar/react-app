@@ -1,11 +1,14 @@
 import React from 'react';
 import  classes from './App.css';
 import BurgerBuilder from './containers/BurgerBuilder'
+import Layout from './components/Layout/Layout'
 function App() {
   return (
     <div className={classes.App}>
-     <div>menubar, slider, navbar</div>
+     <Layout>
      <BurgerBuilder/>
+     </Layout>
+    
     </div>
   );
 }
