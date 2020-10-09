@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import BuildControls from '../components/BuildControls/BuildControls';
 import Burger from '../components/Burger/Burger';
+import OrderSummary from '../components/Order Summary/OrderSummary';
 import Aux from '../hoc/Aux';
+import Modal from '../UI/Modal/Modal';
 
 const PRICE= {
     salad: 0.2, 
@@ -19,7 +21,15 @@ class BurgerBuilder extends Component{
             bacon:0
         }, 
         price:4,
-        purchaseable: false
+        purchaseable: false,
+        order: false
+    }
+
+    orderHandler() {
+        console.log(this.state.order)
+        this.setState({
+            order: true
+        })
     }
     updatePurchasableState(objClone) {
         let sum = Object.keys(objClone)
@@ -72,11 +82,15 @@ class BurgerBuilder extends Component{
     render() {
         return( 
             <Aux>
+                 <Modal show={this.state.order}>
+                    <OrderSummary ingridients={this.state.ingridients}/>
+                 </Modal> 
                  <Burger ingridients={this.state.ingridients}/>
                  <BuildControls label={this.state.ingridients}
                  add={this.addIngridientHandler}
                  remove={this.removeIngridinetHandler}
                  price={this.state.price}
+                 ordered={this.orderHandler.bind(this)}
                  purchaseable={this.state.purchaseable}/>
             </Aux>
         )

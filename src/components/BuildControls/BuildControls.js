@@ -14,13 +14,13 @@ const BuildControls = props => {
             remove={()=>props.remove(element.type)}/>);
 
         // console.log(arrList )
-        console.log(props.purchaseable)
+        // console.log(props.purchaseable)
         return (
         <div className={classes.BuildControls}>
             Price: ${props.price.toFixed(2)}
             {arrList}
-            <button
-            disabled={!props.purchaseable}>ORDER NOW</button>
+            <button disabled={!props.purchaseable}
+            onClick={props.ordered}>ORDER NOW</button>
         </div>
         );
 
