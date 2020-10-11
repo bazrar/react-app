@@ -1,0 +1,22 @@
+.SideDrawer { 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    height: 100%; 
+    width: 50%;
+    background-color:rgba(226, 183, 117,0.5);
+    display:flex;
+    flex-direction: column;
+    z-index:200;
+}
+
+.Logo {
+    height: 11%;
+}
+@media(min-width: 500px) {
+    .SideDrawer{
+        display:none;
+    }
+}
+
+
